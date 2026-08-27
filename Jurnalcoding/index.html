@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jurnal Ngoding — Catatan Belajar Web Development</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <div class="brand">
+        <span class="prompt">&gt;_</span>
+        <span class="brand-name">Jurnal Ngoding</span>
+      </div>
+      <nav>
+        <a href="#content">Tulisan</a>
+        <a href="#tentang">Tentang</a>
+        <a class="profile-link" href="https://www.dicoding.com/users/ferdi_yansyah/academies" target="_blank" rel="noopener noreferrer">Profil Dicoding</a>
+        <button id="theme-toggle" class="theme-toggle" type="button" aria-pressed="false" aria-label="Ganti ke mode terang">
+          <span aria-hidden="true">🌙</span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="wrap">
+      <p class="eyebrow">catatan mingguan seorang pemula</p>
+      <h1>Belajar ngoding, satu bug dan satu kemenangan kecil pada satu waktu.</h1>
+      <p>Ruang untuk mencatat proses belajar HTML, CSS, dan JavaScript — supaya progres yang kadang terasa lambat tetap terlihat nyata.</p>
+    </div>
+  </section>
+
+  <main>
+    <div class="wrap">
+
+      <div id="content">
+
+        <div class="filter-bar" role="group" aria-label="Filter tulisan berdasarkan topik">
+          <span class="filter-label">Filter:</span>
+          <button class="filter-btn is-active" type="button" data-filter="all">Semua</button>
+          <button class="filter-btn" type="button" data-filter="html">html</button>
+          <button class="filter-btn" type="button" data-filter="css">css</button>
+          <button class="filter-btn" type="button" data-filter="flexbox">flexbox</button>
+          <button class="filter-btn" type="button" data-filter="refleksi">refleksi</button>
+        </div>
+
+        <article data-tags="html semantic aksesibilitas">
+          <p class="meta">02 Juli 2026 · Semantic HTML</p>
+          <h2>Akhirnya Paham Kenapa &lt;div&gt; Saja Tidak Cukup</h2>
+          <p>Minggu ini saya belajar tentang elemen semantic HTML seperti header, nav, main, article, dan aside. Awalnya terasa merepotkan dibanding cuma menumpuk div, tapi setelah dicoba ternyata struktur halaman jadi jauh lebih mudah dibaca baik oleh manusia maupun oleh screen reader.</p>
+          <p>Pelajaran paling penting di sini adalah setiap elemen punya makna, bukan cuma kotak kosong untuk styling. Itu sebabnya membaca ulang markup lama saya sendiri jadi terasa seperti membaca coretan asing.</p>
+          <div class="tags"><span>html</span><span>semantic</span><span>aksesibilitas</span></div>
+          <button class="like-btn" type="button" data-post-id="post-1" aria-pressed="false">
+            <span class="like-icon" aria-hidden="true">♥</span>
+            <span class="like-label">Suka</span>
+            <span class="like-count">0</span>
+          </button>
+        </article>
+
+        <article data-tags="css flexbox layout">
+          <p class="meta">27 Juni 2026 · Layout</p>
+          <h2>Pindah dari Float ke Flexbox, Tidak Ada Jalan Kembali</h2>
+          <p>Selama ini layout saya dibangun dengan kombinasi float dan clearfix yang rasanya rapuh geser satu angka sajasemua bisa berantakan. Setelah mencoba flexbox untuk menyusun kolom konten dan sidebar, urusan penyelarasan elemen jadi jauh lebih efektif.</p>
+          <p>Properti seperti flex, gap, dan align-items menggantikan banyak trik lama yang selama ini saya hafal tanpa benar-benar mengerti kenapa itu bekerja.</p>
+          <div class="tags"><span>css</span><span>flexbox</span><span>layout</span></div>
+          <button class="like-btn" type="button" data-post-id="post-2" aria-pressed="false">
+            <span class="like-icon" aria-hidden="true">♥</span>
+            <span class="like-label">Suka</span>
+            <span class="like-count">1</span>
+          </button>
+        </article>
+
+        <article data-tags="refleksi produktivitas">
+          <p class="meta">19 Juni 2026 · Kebiasaan Belajar</p>
+          <h2>Menulis Ulang Kode Lama Ternyata Cara Belajar yang Ampuh</h2>
+          <p>Daripada terus menambah proyek baru, saya coba kembali ke proyek lama dan merapikannya dengan pengetahuan yang sekarang sudah dimiliki. Ternyata banyak keputusan lama yang dulu masuk akal, sekarang terlihat jelas kekurangannya.</p>
+          <p>Kebiasaan ini membantu melihat progres secara konkret sesuatu yang sering hilang kalau belajar cuma maju terus tanpa menoleh ke belakang.</p>
+          <div class="tags"><span>refleksi</span><span>produktivitas</span></div>
+          <button class="like-btn" type="button" data-post-id="post-3" aria-pressed="false">
+            <span class="like-icon" aria-hidden="true">♥</span>
+            <span class="like-label">Suka</span>
+            <span class="like-count">2</span>
+          </button>
+        </article>
+
+        <p class="empty-state" id="empty-state" hidden>Belum ada tulisan untuk topik ini. Coba pilih filter lain.</p>
+
+      </div>
+
+      <aside id="tentang">
+        <div class="profile-card">
+          <div class="photo-frame">
+            <img src="assets/foto.jpeg" alt="Foto profil penulis Jurnal Ngoding">
+          </div>
+          <div class="info">
+            <h3>Hai, saya Ferdi Ardiansyah</h3>
+            <p class="role">Front-End Enthusiast</p>
+            <p>Saya merupakan mahasiswa aktif yang sedang menekuni HTML, CSS, dan JavaScript sambil membangun proyek kecil-kecilan. Jurnal ini adalah catatan jujur dari proses yang telah saya pelajari.</p>
+          </div>
+        </div>
+
+        <div class="side-box">
+          <h4>Sedang Dipelajari</h4>
+          <ul>
+            <li>Flexbox &amp; CSS Grid</li>
+            <li>JavaScript dasar</li>
+            <li>Aksesibilitas web</li>
+          </ul>
+        </div>
+      </aside>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <p>&copy; 2026 Jurnal Ngoding. Dibuat sebagai submission tugas akhir.</p>
+      <div class="foot-links">
+      </div>
+    </div>
+  </footer>
+
+  <button id="back-to-top" class="back-to-top" type="button" aria-label="Kembali ke atas halaman" hidden>
+    <span aria-hidden="true">↑</span>
+  </button>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
